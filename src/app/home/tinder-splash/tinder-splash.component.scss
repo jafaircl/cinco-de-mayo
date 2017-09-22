@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "Hipster Script Pro";
+    src: url("/assets/fonts/Hipster-Script-Pro.otf");
+}
+
+:host {
+    // width: 100%; height: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    transform: translateZ(0);
+    background: black;
+    
+
+    .splash-blur {
+        // background-image: url('http://azmind.com/wp-content/uploads/2012/11/blurred-background-4.jpg');
+        position: absolute;
+        // z-index: 1;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url('/assets/images/raleigh-full.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-backface-visibility: hidden;
+        -webkit-transform: translateZ(0) scale(1.1, 1.1);
+        transform: translateZ(0) scale(1.1, 1.1);
+        -webkit-filter: blur(5px); // brightness(15%);
+        filter: blur(5px); // brightness(15%);
+        opacity: 0.33;
+    }
+
+    article {
+        position: relative;
+        max-width: 480px;
+        margin: 64px auto;
+        text-align: center;
+        color: #FFF;
+        
+        header {
+            h1 {
+                color: #fff;
+                font-family: "Hipster Script Pro";
+                font-size: 64px;
+                font-weight: lighter;
+                /* Needed to fix swash on Chrome */
+                font-variant-ligatures: no-contextual;
+                -moz-font-feature-settings: "calt" 0;
+                -webkit-font-feature-settings: "calt" 0;
+                font-feature-settings: "calt" 0;
+            }
+        }
+
+        main {
+
+            .splash-images {
+                margin: 54px auto;
+                
+                
+                img {
+                    width: 120px;
+                    border: 3px solid white;
+                    border-radius: 50%;
+                    overflow: hidden;
+    
+                    &:first-of-type {
+                        margin-right: 24px;
+                    }
+                }
+            }
+        }
+
+        footer {
+            .splash-button {
+                border: 1px solid white;
+                border-radius: 4px;
+                padding: 6px 72px 6px 72px;
+                font-weight: 100;
+    
+                md-icon {
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+}

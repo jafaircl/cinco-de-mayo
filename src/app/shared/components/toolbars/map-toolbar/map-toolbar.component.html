@@ -1,0 +1,29 @@
+<md-toolbar>
+  <button md-icon-button
+          (click)="sidenav.open()"
+          class="menu-button">
+    <i-menu class="feather-icon-button"></i-menu>
+  </button>
+
+  <span class="flex-fill-space"></span>
+
+  <button md-icon-button
+          [mdMenuTriggerFor]="menu"
+          class="menu-button">
+    <i-filter class="feather-icon-button"></i-filter>
+  </button>
+</md-toolbar>
+<md-menu #menu="mdMenu">
+  <button md-menu-item (click)="filterClick('')">
+    <md-icon>select_all</md-icon>
+    <span>All Places</span>
+  </button>
+  <button md-menu-item (click)="filterClick('eat')">
+    <md-icon>restaurant</md-icon>
+    <span>Places To Eat</span>
+  </button>
+  <button md-menu-item (click)="filterClick('drink')">
+    <md-icon>local_bar</md-icon>
+    <span>Places To Drink</span>
+  </button>
+</md-menu>

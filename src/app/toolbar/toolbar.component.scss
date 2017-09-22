@@ -1,0 +1,9 @@
+@import '~scss/_settings.colors.scss';
+
+:host {
+    // position: relative;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    // perspective: 1000px;
+}

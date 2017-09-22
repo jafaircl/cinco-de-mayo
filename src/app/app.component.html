@@ -1,0 +1,27 @@
+<md-sidenav-container>
+
+  <main #main>
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer>
+  </footer>
+
+  <md-sidenav #sidenav>
+    <md-list>
+      <a md-list-item
+          routerLink="/"
+          (click)="sidenav.close()">Home</a>
+      <a md-list-item
+          routerLink="/map"
+          (click)="sidenav.close()">Map</a>
+    </md-list>
+  </md-sidenav>
+  
+</md-sidenav-container>
+
+<header class="header-toolbar">
+  <app-toolbar [sidenav]="sidenav"
+               [router]="router"
+               [location]="location"></app-toolbar>
+</header>

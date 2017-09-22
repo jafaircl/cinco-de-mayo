@@ -1,0 +1,16 @@
+@import '~scss/_tools.gradients.scss';
+
+:host {
+    // position: initial;
+    pointer-events: none;
+
+    md-toolbar {
+        background: transparent;
+        // @include scrimGradient('to bottom', rgba(0,0,0,.6));
+
+        .menu-button {
+            pointer-events: all;
+            color: #fff;
+        }
+    }
+}

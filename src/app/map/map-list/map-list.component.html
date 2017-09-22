@@ -1,0 +1,31 @@
+
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="15">
+  <agm-marker *ngFor="let card of cards"
+              [latitude]="card.lat"
+              [longitude]="card.lng"></agm-marker>
+</agm-map>
+<swiper #usefulSwiper
+        *ngIf="allLocations && allLocations.length > 1"
+        [config]="config"
+        class="swiper-container">
+  <div class="swiper-wrapper">
+    <md-card class="swiper-slide"
+             *ngFor="let card of cards"
+             (click)="setData(card)"
+             appExplodeAnimation
+             [destination]="'/map/' + card.slug"
+             [offsetX]="map.offsetX"
+             [duration]="animationDuration"
+             [aspectHeight]="aspectHeight">
+      <div class="background-image">
+        <div class="image-wrap">
+          <img md-card-image class="image" [src]="card.img">
+        </div>
+      </div>
+      <div class="image-overlay"><span></span></div>
+      <md-card-title>{{ card.title }}</md-card-title>
+    </md-card>
+  </div>
+  <div #placeholder class="animation-placeholder"></div>
+</swiper>
+<div class="gradient-overlay"></div>

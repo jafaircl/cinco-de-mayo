@@ -1,0 +1,36 @@
+@import '~scss/_settings.fonts.scss';
+@import '~scss/_settings.colors.scss';
+
+:host {
+    font-family: $system-sans-serif;
+    background: $white-background;
+
+    md-sidenav-container {
+        position: fixed;
+        top: 0; left: 0;
+        height: 100%; width: 100vw;
+        overflow: hidden;
+        background: $white-background;
+        
+
+        main {
+            router-outlet {
+                position: relative;
+                height: 100%;
+            }
+        }
+
+        footer {
+
+        }
+
+        md-sidenav {
+            padding-top: 64px;
+        }
+    }
+
+    .header-toolbar {
+
+    }
+}
+

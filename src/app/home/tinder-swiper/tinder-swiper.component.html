@@ -1,0 +1,35 @@
+
+<ul class="stack" swing-stack [stackConfig]="stackConfig" #stack>
+  <li swing-card #cards *ngFor="let c of cards">
+    <md-card class="card" [style.backgroundImage]="c.img">
+      <!--<img md-card-image [src]="c.img">-->
+      <div class="image-overlay"></div>
+      <md-card-content>
+        <md-card-title>{{ c.name }}, {{ c.date }}</md-card-title>
+        <p class="mat-body-1">{{ c.text }}</p>
+      </md-card-content>
+    </md-card>
+  </li>
+</ul>
+
+<div class="button-wrap">
+  <button md-mini-fab
+          class="like-button refresh"
+          (click)="like()"><md-icon>refresh</md-icon></button>
+
+  <button md-fab
+          class="like-button close"
+          (click)="like()"><md-icon>close</md-icon></button>
+
+  <button md-mini-fab
+          class="like-button star"
+          (click)="like()"><md-icon>star</md-icon></button>
+
+  <button md-fab
+          class="like-button favorite"
+          (click)="like()"><md-icon>favorite</md-icon></button>
+
+  <button md-mini-fab
+          class="like-button flash"
+          (click)="like()"><md-icon>flash_on</md-icon></button>
+</div>

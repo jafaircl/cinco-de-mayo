@@ -1,0 +1,90 @@
+@import '~scss/_tools.gradients.scss';
+@import '~scss/_tools.aspect-ratio.scss';
+
+:host {
+    background: lightblue;
+    height: 100%;
+
+    agm-map {
+        height: 100%;
+    }
+
+    .swiper-container {
+        position: fixed;
+        top: 0; left: 0;
+        pointer-events: none;
+        height: 100%;
+        width: 100%;
+        /*position: fixed;
+       //  transform: translate3d(0,0,20px);
+       overflow-x: auto;
+        bottom: 0; left: 0;
+        height: 208px;
+        width: 100%;*/
+
+        .swiper-wrapper {
+
+            .swiper-slide {
+                cursor: pointer;
+                pointer-events: all;
+                height: 140px;
+                width: 250px;
+                top: calc(100% - 156px);
+                padding: 0 0 0 0;
+                overflow: hidden;
+                // @include aspect-ratio(16 9);
+                /*height: 150px;
+                width: 200px;
+                overflow: hidden;*/
+
+                // height: 180px;
+
+                .background-image {
+                    pointer-events: none;
+
+                    .image-wrap {
+
+                        /*.image {
+                            z-index: 0;
+                            position: absolute;
+                            top: 50%; left: 50%;
+                            transform: translate(-50%, -50%);
+                            // width: 216px;
+                        }*/
+                    }
+                }
+
+                .image-overlay {
+                    position: absolute;
+                    bottom: 0; left: 0;
+                    width: 100%; height: 100%;
+                    @include scrimGradient('to top', #000, 0.6);
+                }
+                
+                md-card-title {
+                    position: absolute;
+                    bottom: 0; left: 0;
+                    color: white;
+                    padding: 16px;
+                }
+            }
+        }
+    }
+
+    .gradient-overlay {
+        z-index: 3;
+        pointer-events: none;
+        position: absolute;
+        top: 0; left: 0;
+        height: 168px; width: 100%;
+        @include scrimGradient('to bottom', #000, 0.5);
+    }
+
+    .animation-placeholder {
+        position: fixed;
+        z-index: 1;
+        bottom: 0; left: 0;
+        width: 100%; height: 0;
+        background: #fff;
+    }
+}

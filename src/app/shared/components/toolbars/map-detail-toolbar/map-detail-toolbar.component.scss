@@ -1,0 +1,12 @@
+:host {
+    pointer-events: none;
+
+    md-toolbar {
+        background: transparent;
+
+        .menu-button {
+            pointer-events: all;
+            color: #fff;
+        }
+    }
+}

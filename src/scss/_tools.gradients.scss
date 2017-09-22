@@ -1,0 +1,34 @@
+@mixin scrimGradient($direction: 'to bottom', $startColor: 'black', $opacity: 1) {
+    
+    $scrimCoordinates: (
+      0: 1 * $opacity,
+      5.3: 0.917 * $opacity,
+      10.6: 0.834 * $opacity,
+      15.9: 0.753 * $opacity,
+      21.3: 0.672 * $opacity,
+      26.8: 0.591 * $opacity,
+      32.5: 0.511 * $opacity,
+      38.4: 0.433 * $opacity,
+      44.5: 0.357 * $opacity,
+      50.9: 0.283 * $opacity,
+      57.7: 0.213 * $opacity,
+      65: 0.147 * $opacity,
+      72.9: 0.089 * $opacity,
+      81.4: 0.042 * $opacity,
+      90.6: 0.011 * $opacity,
+      100: 0
+    );
+    
+    $hue: hue($startColor);
+    $saturation: saturation($startColor);
+    $lightness: lightness($startColor);
+    $stops: ();
+    
+    @each $colorStop, $alphaValue in $scrimCoordinates {
+      $stop: hsla($hue, $saturation, $lightness, $alphaValue) percentage($colorStop/100);
+      $stops: append($stops, $stop, comma);
+    }
+    
+    background: linear-gradient(unquote($direction), $stops);
+    
+}

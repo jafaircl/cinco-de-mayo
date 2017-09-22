@@ -1,0 +1,19 @@
+@import '~scss/_settings.colors.scss';
+
+:host {
+    // position: initial;
+    md-toolbar {
+        background: $white-background;
+
+        .menu-button {
+            color: #999;
+        }
+
+        .center {
+            width: 80px;
+            border-radius: 18px;
+            background: linear-gradient(45deg, #DF4685, #FF8543);
+            color: #fff;
+        }
+    }
+}
