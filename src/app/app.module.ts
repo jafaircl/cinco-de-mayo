@@ -13,6 +13,8 @@ import { TinderToolbarComponent } from './shared/components/toolbars/tinder-tool
 import { BlankToolbarComponent } from './shared/components/toolbars/blank-toolbar/blank-toolbar.component';
 import { MapToolbarComponent } from './shared/components/toolbars/map-toolbar/map-toolbar.component';
 import { MapDetailToolbarComponent } from './shared/components/toolbars/map-detail-toolbar/map-detail-toolbar.component';
+import { PlaylistToolbarComponent } from './shared/components/toolbars/playlist-toolbar/playlist-toolbar.component';
+import { PlaylistSearchToolbarComponent } from './shared/components/toolbars/playlist-search-toolbar/playlist-search-toolbar.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { MapDetailToolbarComponent } from './shared/components/toolbars/map-deta
     TinderToolbarComponent,
     BlankToolbarComponent,
     MapToolbarComponent,
-    MapDetailToolbarComponent
+    MapDetailToolbarComponent,
+    PlaylistToolbarComponent,
+    PlaylistSearchToolbarComponent
   ]
 })
 export class AppModule { }

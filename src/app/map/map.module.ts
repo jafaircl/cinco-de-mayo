@@ -5,6 +5,7 @@ import { AgmCoreModule } from '@agm/core';
 import { SwiperModule } from 'angular2-useful-swiper';
 import { ApolloClient, createNetworkInterface } from 'apollo-client';
 import { ApolloModule } from 'apollo-angular';
+import { IconGlobe, IconMapPin, IconPhone } from 'angular-feather';
 
 import { SharedModule } from '../shared/shared.module';
 import { MapService } from '../shared/services/map.service';
@@ -29,9 +30,14 @@ export function provideClient(): ApolloClient {
   imports: [
     SharedModule,
     MapRoutingModule,
-    AgmCoreModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBqX_qkz-L2C8RGuIn-B4qU55WHKH48Iww'
+    }),
     SwiperModule,
-    ApolloModule.forRoot(provideClient)
+    ApolloModule.forRoot(provideClient),
+    IconGlobe,
+    IconMapPin,
+    IconPhone
   ],
   declarations: [MapListComponent, MapDetailComponent, MapSearchComponent],
   providers: [MapService]

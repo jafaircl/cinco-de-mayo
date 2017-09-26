@@ -1,0 +1,24 @@
+<md-toolbar>
+    <button md-icon-button
+            (click)="sidenav.toggle()"
+            class="menu-button">
+      <i-menu class="feather-icon-button"></i-menu>
+    </button>
+  
+    <span class="flex-fill-space"></span>
+  
+    <button md-button
+            (click)="router.navigateByUrl('/home')"
+            class="center">
+      <md-icon>whatshot</md-icon>
+    </button>
+  
+    <span class="flex-fill-space"></span>
+  
+    <button md-icon-button
+            (click)="router.navigateByUrl('/playlist/search')"
+            class="menu-button">
+      <i-search class="feather-icon-button"></i-search>
+    </button>
+  </md-toolbar>
+    

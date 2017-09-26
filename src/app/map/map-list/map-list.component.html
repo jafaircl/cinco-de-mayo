@@ -1,8 +1,9 @@
 
-<agm-map [latitude]="lat" [longitude]="lng" [zoom]="15">
-  <agm-marker *ngFor="let card of cards"
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="14" [styles]="mapStyle" [usePanning]="true">
+  <agm-marker *ngFor="let card of cards; let i = index"
               [latitude]="card.lat"
-              [longitude]="card.lng"></agm-marker>
+              [longitude]="card.lng"
+              (markerClick)="markerClick(i)">hey</agm-marker>
 </agm-map>
 <swiper #usefulSwiper
         *ngIf="allLocations && allLocations.length > 1"
@@ -13,18 +14,29 @@
              *ngFor="let card of cards"
              (click)="setData(card)"
              appExplodeAnimation
-             [destination]="'/map/' + card.slug"
+             [destination]="'/map/' + card.id"
              [offsetX]="map.offsetX"
              [duration]="animationDuration"
              [aspectHeight]="aspectHeight">
       <div class="background-image">
         <div class="image-wrap">
-          <img md-card-image class="image" [src]="card.img">
+          <img md-card-image class="image" [src]="card.imageUrl">
         </div>
       </div>
       <div class="image-overlay"><span></span></div>
-      <md-card-title>{{ card.title }}</md-card-title>
+      <md-card-title>{{ card.name }}</md-card-title>
     </md-card>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
+    <div class="swiper-slide"></div>
   </div>
   <div #placeholder class="animation-placeholder"></div>
 </swiper>

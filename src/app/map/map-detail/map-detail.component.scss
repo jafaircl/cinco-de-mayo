@@ -58,4 +58,40 @@
         height: 168px; width: 100%;
         @include scrimGradient('to bottom', #000, 0.5);
     }
+
+    .map-detail-content {
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 16px;
+        color: $text-color;
+
+        md-list {
+            margin-bottom: 24px;
+        }
+
+        .ride-button {
+            width: 100%;
+            color: rgba(255,255,255,1);
+            border-radius: 4px;
+            padding: 8px;
+            margin-bottom: 16px;
+
+            &.lyft {
+                background-color: #FF00BF;
+            }
+
+            &.uber {
+                background-color: #000;
+            }
+
+            img {
+                height: 24px;
+                margin-right: 16px;
+            }
+        }
+
+        agm-map {
+            height: 320px;
+        }
+    }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { SharedService } from '../../../services/shared.service';
 import { ToolbarFlipAnimation } from '../../../animations/toolbar-flip.animation';
 
 @Component({
@@ -20,13 +21,20 @@ export class MapDetailToolbarComponent implements OnInit {
   @Input()
   router: any;
 
-  constructor() { }
+  constructor(private shared: SharedService) { }
 
   ngOnInit() {
   }
 
   logger() {
-    console.log(location);
+  }
+
+  goBack() {
+    if (this.shared.hasPrev) {
+      this.location.back();
+    } else {
+      this.router.navigateByUrl('/map');
+    }
   }
 
 }

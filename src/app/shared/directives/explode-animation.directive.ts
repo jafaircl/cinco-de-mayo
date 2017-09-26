@@ -68,6 +68,7 @@ export class ExplodeAnimationDirective {
       animate(`${this.duration}ms ${this.curve}`, style({
         transform: `translate3d(-${props.left}px, -${props.top}px,0)`,
         width: `100%`,
+        minWidth: `${props.width}px`,
         height: `${this.aspectHeight}vw`
       }))
     ]);

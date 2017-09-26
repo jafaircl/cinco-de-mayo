@@ -18,12 +18,20 @@
     <md-icon>select_all</md-icon>
     <span>All Places</span>
   </button>
-  <button md-menu-item (click)="filterClick('eat')">
+  <button md-menu-item (click)="filterClick('Wedding')">
+      <md-icon>favorite</md-icon>
+      <span>Wedding Venues</span>
+    </button>
+  <button md-menu-item (click)="filterClick('Eat')">
     <md-icon>restaurant</md-icon>
     <span>Places To Eat</span>
   </button>
-  <button md-menu-item (click)="filterClick('drink')">
+  <button md-menu-item (click)="filterClick('Drink')">
     <md-icon>local_bar</md-icon>
     <span>Places To Drink</span>
+  </button>
+  <button md-menu-item (click)="filterClick('Family')">
+    <md-icon>child_friendly</md-icon>
+    <span>Places For Kids</span>
   </button>
 </md-menu>

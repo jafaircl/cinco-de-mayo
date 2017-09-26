@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Hipster Script Pro";
-    src: url("/assets/fonts/Hipster-Script-Pro.otf");
+    src: url("/assets/fonts/Hipster-Script-Pro.woff2") format('woff2'),
+         url("/assets/fonts/Hipster-Script-Pro.woff") format('woff');
 }
 
 :host {

@@ -26,9 +26,9 @@ export class MapToolbarComponent implements OnInit {
   }
 
   filterClick(value) {
-    console.log(value);
-    this.shared.mapFilter = value;
-    console.log(this.shared.mapFilter);
+    // console.log(value);
+    this.shared._mapFilter = value;
+    // console.log(this.shared.mapFilter);
   }
 
 }

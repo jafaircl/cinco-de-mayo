@@ -1,10 +1,49 @@
-<md-card class="swiper-slide">
-  <div class="background-image">
-    <div class="image-wrap">
-      <img md-card-image class="image" [src]="map.selected.img">
+<div *ngIf="location">
+  <md-card class="swiper-slide">
+    <div class="background-image">
+      <div class="image-wrap">
+        <img md-card-image class="image" [src]="location.imageUrl">
+      </div>
     </div>
+    <div class="image-overlay"><span></span></div>
+    <md-card-title>{{ location.name }}</md-card-title>
+  </md-card>
+  <div class="gradient-overlay"></div>
+  <div class="map-detail-content">
+    <p>{{ location.description }}</p>
+    <md-list>
+      <md-list-item>
+        <i-map-pin class="feather-icon-button"></i-map-pin>
+        <a md-button target="_blank" href="https://maps.google.com/?q={{ location.address }} Raleigh, NC">{{ location.address }}</a>
+      </md-list-item>
+      <md-list-item>
+        <i-phone class="feather-icon-button"></i-phone>
+        <a md-button href="tel:{{ location.phone }}">{{ location.phone }}</a>
+      </md-list-item>
+      <md-list-item>
+        <i-globe class="feather-icon-button"></i-globe>
+        <a md-button target="_blank" href="//{{ location.website }}">{{ location.website }}</a>
+      </md-list-item>
+    </md-list>
+
+    <a md-raised-button 
+       class="ride-button lyft"
+       target="_blank"
+       [href]="lyftUrl()">
+      <img src="/assets/images/lyft-logo.svg">
+      <span>Get a ride with Lyft</span>
+    </a>
+    <a md-raised-button 
+       class="ride-button uber"
+       target="_blank"
+       [href]="uberUrl()">
+      <img src="/assets/images/uber-logo.svg">
+      <span>Get a ride with Uber</span>
+    </a>
+    <br>
+    <agm-map [latitude]="location.lat" [longitude]="location.lng" [zoom]="15">
+        <agm-marker [latitude]="location.lat"
+                    [longitude]="location.lng"></agm-marker>
+    </agm-map>
   </div>
-  <div class="image-overlay"><span></span></div>
-  <md-card-title>{{ map.selected.title }}</md-card-title>
-</md-card>
-<div class="gradient-overlay"></div>
+</div>

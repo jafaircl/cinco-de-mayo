@@ -32,6 +32,8 @@ import { TinderToolbarComponent } from './components/toolbars/tinder-toolbar/tin
 import { MapToolbarComponent } from './components/toolbars/map-toolbar/map-toolbar.component';
 import { ExplodeAnimationDirective } from './directives/explode-animation.directive';
 import { MapDetailToolbarComponent } from './components/toolbars/map-detail-toolbar/map-detail-toolbar.component';
+import { PlaylistToolbarComponent } from './components/toolbars/playlist-toolbar/playlist-toolbar.component';
+import { PlaylistSearchToolbarComponent } from './components/toolbars/playlist-search-toolbar/playlist-search-toolbar.component';
 
 
 
@@ -77,7 +79,9 @@ import { MapDetailToolbarComponent } from './components/toolbars/map-detail-tool
     TinderToolbarComponent,
     MapToolbarComponent,
     ExplodeAnimationDirective,
-    MapDetailToolbarComponent
+    MapDetailToolbarComponent,
+    PlaylistToolbarComponent,
+    PlaylistSearchToolbarComponent
   ]
 })
 export class SharedModule { }

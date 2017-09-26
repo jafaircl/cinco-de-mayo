@@ -1,0 +1,27 @@
+<article>
+  <header>
+    <a md-fab 
+      color="primary"
+      routerLink="/playlist/search">
+     <md-icon>play</md-icon>
+    </a>
+  </header>
+  <md-list>
+    <md-list-item *ngFor="let song of allSongs">
+      <img mdListAvatar
+          [src]="song.imageUrl"
+          class="mat-elevation-z1"
+          alt="{{ song.artist }} - {{ song.name }}">
+      <h3 mdLine> {{ song.name }} </h3>
+      <p mdLine>
+        <span> {{ song.artist }} </span>
+      </p>
+    </md-list-item>
+  </md-list>
+</article>
+<a md-fab 
+   color="primary"
+   routerLink="/playlist/search"
+   class="fab">
+  <md-icon>add</md-icon>
+</a>

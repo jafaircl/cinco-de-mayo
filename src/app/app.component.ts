@@ -14,7 +14,5 @@ export class AppComponent implements OnInit {
   constructor(public router: Router, public location: Location) { }
 
   ngOnInit() {
-    const outlet = this.main.element.nativeElement;
-    console.log(outlet);
   }
 }
