@@ -1,12 +1,18 @@
+@import '~scss/_settings.colors.scss';
 
 :host {
+    background: $white-background;
     article {
         height: 100%;
         max-width: 480px;
-        margin: 64px auto;
+        margin: 84px auto;
 
         header {
             margin: 0 28px 0 28px;
+
+            h1 {
+
+            }
         }
         
         md-list {
@@ -21,10 +27,5 @@
                 }
             }
         }
-    }
-
-    .fab {
-        position: fixed;
-        bottom: 24px; right: 24px;
     }
 }

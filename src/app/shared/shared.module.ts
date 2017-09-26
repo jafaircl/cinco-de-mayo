@@ -1,6 +1,7 @@
 import { NgModule, ApplicationModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import {
   MdButtonModule,
@@ -22,8 +23,6 @@ import {
   IconX
 } from 'angular-feather';
 
-
-
 import { ToolbarService } from './services/toolbar.service';
 import { SharedService } from './services/shared.service';
 import { DefaultToolbarComponent } from './components/toolbars/default-toolbar/default-toolbar.component';
@@ -40,6 +39,7 @@ import { PlaylistSearchToolbarComponent } from './components/toolbars/playlist-s
 @NgModule({
   imports: [
     CommonModule,
+    HttpClientModule,
     MdButtonModule,
     MdCardModule,
     MdIconModule,
@@ -57,6 +57,7 @@ import { PlaylistSearchToolbarComponent } from './components/toolbars/playlist-s
   ],
   exports: [
     CommonModule,
+    HttpClientModule,
     MdButtonModule,
     MdCardModule,
     MdIconModule,

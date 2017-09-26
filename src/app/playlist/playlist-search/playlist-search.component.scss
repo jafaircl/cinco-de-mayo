@@ -1,0 +1,36 @@
+@import '~scss/_settings.colors.scss';
+
+:host {
+    background: $white-background;
+    article {
+        height: 100%;
+        max-width: 480px;
+        margin: 64px auto;
+
+        header {
+            margin: 0 28px 0 28px;
+
+            .search-field {
+                margin-top: 24px;
+                width: 100%;
+            }
+        }
+        
+        md-list {
+
+            md-list-item {
+                margin: 12px;
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 6px;
+                }
+
+                .fab {
+                    color: $red-color;
+                }
+            }
+        }
+    }
+}

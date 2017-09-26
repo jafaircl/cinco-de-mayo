@@ -1,3 +1,24 @@
-<p>
-  playlist-search works!
-</p>
+<article>
+  <header>
+    <md-form-field class="search-field">
+      <input mdInput placeholder="Search..." (keyup)="searchTerm$.next($event.target.value)">
+    </md-form-field>
+  </header>
+  <md-list>
+    <md-list-item *ngFor="let song of results">
+      <img mdListAvatar
+          [src]="song.artworkUrl60"
+          class="mat-elevation-z1"
+          alt="{{ song.artistName }} - {{ song.trackName }}">
+      <h3 mdLine> {{ song.trackName }} </h3>
+      <p mdLine>
+        <span> {{ song.artistName }} </span>
+      </p>
+      <a md-icon-button
+         (click)="pushSong(song)"
+         class="fab">
+        <i-plus></i-plus>
+      </a>
+    </md-list-item>
+  </md-list>
+</article>

@@ -1,13 +1,10 @@
 <article>
   <header>
-    <a md-fab 
-      color="primary"
-      routerLink="/playlist/search">
-     <md-icon>play</md-icon>
-    </a>
+    <h1>Our Playlist</h1>
+    <p>Want to hear a song at the reception? Click the search button to put your song on the list!</p>
   </header>
   <md-list>
-    <md-list-item *ngFor="let song of allSongs">
+    <md-list-item *ngFor="let song of allSongs | async">
       <img mdListAvatar
           [src]="song.imageUrl"
           class="mat-elevation-z1"
@@ -19,9 +16,3 @@
     </md-list-item>
   </md-list>
 </article>
-<a md-fab 
-   color="primary"
-   routerLink="/playlist/search"
-   class="fab">
-  <md-icon>add</md-icon>
-</a>
